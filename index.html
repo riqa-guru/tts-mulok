@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mulok Kelas XI – Upacara Adat Kalimantan Tengah</title>
+<style>
+:root{--bg:#f6f4ef;--card:#fff;--tx:#1f2a24;--mu:#66706a;--pr:#1f6f4a;--pr2:#e3f2ea;--bd:#dcd8cd;--ok:#1f8a4c;--no:#c0392b}
+@media(prefers-color-scheme:dark){:root{--bg:#14191600;--bg:#141916;--card:#1d2420;--tx:#eaefe9;--mu:#9aa69f;--pr:#4cc38a;--pr2:#22382c;--bd:#33403a;--ok:#4cc38a;--no:#ff7b6b}}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6}
+header{padding:20px 16px 8px;text-align:center}
+h1{font-size:1.4rem;margin:0}header p{margin:4px 0 0;color:var(--mu);font-size:.9rem}
+nav{display:flex;gap:6px;justify-content:center;padding:10px;position:sticky;top:0;background:var(--bg);z-index:5}
+nav button{border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:8px 16px;border-radius:99px;cursor:pointer;font-size:.95rem}
+nav button.on{background:var(--pr);color:#fff;border-color:var(--pr)}
+main{max-width:760px;margin:0 auto;padding:8px 14px 60px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;margin:12px 0}
+.card h3{margin:0 0 6px;color:var(--pr)}
+.tag{display:inline-block;background:var(--pr2);color:var(--pr);border-radius:6px;padding:1px 8px;font-size:.8rem;margin:2px 4px 2px 0}
+input,select{width:100%;padding:10px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font-size:1rem;margin:4px 0 10px}
+.btn{background:var(--pr);color:#fff;border:0;padding:10px 18px;border-radius:10px;cursor:pointer;font-size:1rem}
+.btn.g{background:transparent;color:var(--tx);border:1px solid var(--bd)}
+.btn:disabled{opacity:.4;cursor:default}
+.opt{display:block;width:100%;text-align:left;padding:12px;margin:8px 0;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);cursor:pointer;font-size:1rem}
+.opt.sel{border-color:var(--pr);background:var(--pr2)}
+.opt.ok{border-color:var(--ok);background:var(--pr2)}.opt.no{border-color:var(--no)}
+.grid{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0}
+.grid span{width:32px;height:32px;display:grid;place-items:center;border:1px solid var(--bd);border-radius:8px;font-size:.8rem;cursor:pointer}
+.grid .done{background:var(--pr2);border-color:var(--pr)}.grid .cur{outline:2px solid var(--pr)}
+.bar{height:6px;background:var(--bd);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--pr)}
+.score{font-size:3rem;font-weight:700;color:var(--pr);text-align:center}
+table{width:100%;border-collapse:collapse;font-size:.9rem}th,td{padding:8px;border-bottom:1px solid var(--bd);text-align:left}
+.wrap{overflow-x:auto}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.msg{font-size:.85rem;color:var(--mu)}
+.tg{display:grid;gap:2px;margin:10px auto;width:max-content;max-width:100%}
+.tc{position:relative;width:clamp(21px,6.3vw,34px);height:clamp(21px,6.3vw,34px)}
+.tc input{width:100%;height:100%;padding:0;margin:0;text-align:center;text-transform:uppercase;font-weight:700;font-size:clamp(.8rem,3.4vw,1.1rem);border-radius:4px}
+.tc input.hl{background:var(--pr2)}.tc input.ok{background:var(--ok);color:#fff}.tc input.no{background:var(--no);color:#fff}
+.tc b{position:absolute;top:0;left:2px;font-size:.55rem;color:var(--mu);pointer-events:none;line-height:1.2}
+.cl{padding:5px 8px;border-radius:8px;cursor:pointer;font-size:.9rem}.cl:hover,.cl.on{background:var(--pr2)}.cl.fin{text-decoration:line-through;color:var(--mu)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:600px){.cols{grid-template-columns:1fr}}
+.hide{display:none}
+</style>
+</head>
+<body>
+<header><h1>Mulok Kelas XI</h1><p>Adat Istiadat &amp; Upacara Adat Kalimantan Tengah</p></header>
+<nav><button data-t="materi" class="on">📖 Materi</button><button data-t="kuis">📝 Kuis</button><button data-t="tts">🧩 TTS</button><button data-t="rekap">📊 Rekap</button></nav>
+<main>
+
+<section id="materi">
+<div class="card"><h3>Adat Istiadat</h3>
+<p>Menurut KBBI, adat istiadat ialah tata kelakuan yang turun-temurun dan kekal dari generasi satu ke generasi lainnya sebagai warisan, sehingga integrasinya kuat terkait dengan pola perilaku masyarakat.</p></div>
+<h2 style="margin:18px 0 0;font-size:1.1rem">Upacara Adat di Kalimantan Tengah</h2>
+<div class="card"><h3>1. Mamapas Lewu</h3><p>Ritual yang dijalankan oleh umat penganut agama <b>Kaharingan</b> Provinsi Kalimantan Tengah. Bertujuan membersihkan alam dan lingkungan hidup (<i>petak danum</i>) beserta segala isinya dari berbagai marabahaya, sial wabah penyakit (<i>rutas pali</i>), dan sebagainya.</p></div>
+<div class="card"><h3>2. Tiwah</h3><p>Upacara yang biasanya digelar bagi seseorang yang telah meninggal. Pada prosesinya dilakukan <b>pemindahan tulang kedalam sandung</b>, menurut tahap-tahap yang sudah menjadi tradisi pada masyarakat Dayak di Kalimantan Tengah.</p></div>
+<div class="card"><h3>3. Tetek Pantan</h3><p>Upacara yang dilakukan dengan rasa bakti dan kepercayaan yang tinggi, bermakna terhadap pengaruh atau membangkitkan rasa Ketuhanan terhadap segala sesuatu yang bersifat sakral, sehingga dengan adanya kasih Tuhan manusia akan merasakan rahmat-Nya.</p></div>
+<div class="card"><h3>4. Nyaki Tihi</h3><p>Upacara atau kegiatan tradisi dalam masyarakat terhadap seorang perempuan yang sedang <b>hamil anak pertama</b> atau <i>Temei</i> (bahasa Dayak Ngaju).</p></div>
+<div class="card"><h3>5. Nahunan</h3><p>Kewajiban yang harus dilaksanakan yang tertuang dalam kitab suci <b>Panaturan pasal 53</b>. Berasal dari kata “nuhun” yang berarti turun. Upacara Nahunan adalah ritual pemberian nama bagi bayi berusia satu bulan atau balita yang dibawa turun keluar rumah.</p></div>
+<div class="card"><button class="btn" onclick="tab('kuis')">Mulai Kuis (35 soal) →</button></div>
+</section>
+
+<section id="kuis" class="hide">
+<div id="start" class="card"><h3>Data Peserta</h3>
+<label>Nama lengkap<input id="nm" placeholder="Nama siswa"></label>
+<label>Kelas<select id="kl"><option value="">-- Pilih kelas --</option><option>11 R1</option><option>11 R2</option><option>11 R3</option><option>11 R4</option><option>11 R5</option><option>11 R6</option></select></label>
+<button class="btn" onclick="mulai()">Mulai Kuis</button>
+<p class="msg">35 soal pilihan ganda. Urutan soal dan pilihan jawaban diacak setiap kali mulai.</p></div>
+<div id="play" class="hide">
+<div class="bar"><i id="pb"></i></div>
+<div class="card"><div class="msg" id="no"></div><h3 id="qt" style="color:var(--tx);font-weight:600"></h3><div id="op"></div>
+<div class="row" style="justify-content:space-between;margin-top:10px"><button class="btn g" id="pv" onclick="go(-1)">← Sebelumnya</button><button class="btn" id="nx" onclick="go(1)">Berikutnya →</button></div></div>
+<div class="grid" id="gr"></div>
+<button class="btn" onclick="selesai()">Kumpulkan Jawaban</button>
+</div>
+<div id="hasil" class="hide"></div>
+</section>
+
+<section id="tts" class="hide">
+<div class="card"><h3>Teka-Teki Silang Adat Kalimantan Tengah</h3>
+<p class="msg">Klik kotak atau petunjuk, lalu ketik jawaban. Klik kotak yang sama dua kali untuk mengganti arah (mendatar/menurun).</p>
+<div class="tg" id="tg"></div>
+<div class="row" style="justify-content:center"><button class="btn" onclick="ttsCek()">✔ Periksa</button><button class="btn g" onclick="ttsBuka()">💡 Tampilkan Jawaban</button><button class="btn g" onclick="ttsReset()">↺ Ulang</button></div>
+<p class="msg" id="tsm" style="text-align:center"></p></div>
+<div class="card cols"><div><h3>Mendatar</h3><div id="cA"></div></div><div><h3>Menurun</h3><div id="cD"></div></div></div>
+</section>
+
+<section id="rekap" class="hide">
+<div class="card"><div class="row"><h3 style="margin:0;flex:1">Rekap Nilai</h3><button class="btn g" onclick="muat()">🔄 Muat Ulang</button><button class="btn g" onclick="csv()">⬇ CSV</button></div>
+<p class="msg" id="st"></p><div class="row" id="chips"></div></div>
+<div id="tbl"></div>
+</section>
+</main>
+
+<script>
+// Format: [soal, jawaban benar, salah1, salah2, salah3]
+const Q=[
+["Menurut KBBI, adat istiadat adalah …","tata kelakuan turun-temurun dan kekal dari generasi ke generasi sebagai warisan","aturan tertulis yang dibuat pemerintah daerah","kebiasaan pribadi yang berubah setiap tahun","hiburan masyarakat yang muncul di era modern"],
+["Adat istiadat memiliki integrasi yang kuat dengan …","pola perilaku masyarakat","perkembangan teknologi","sistem ekonomi global","aturan lalu lintas"],
+["Adat istiadat diwariskan dari …","generasi satu ke generasi lainnya","pemerintah ke rakyat","sekolah ke siswa saja","satu daerah ke negara lain"],
+["Mamapas Lewu dijalankan oleh umat penganut agama …","Kaharingan","Hindu Bali","Buddha Theravada","Konghucu"],
+["Tujuan utama upacara Mamapas Lewu adalah …","membersihkan alam dan lingkungan hidup dari marabahaya","memberi nama bayi","memindahkan tulang orang meninggal","menyambut kehamilan anak pertama"],
+["Istilah “petak danum” dalam Mamapas Lewu merujuk pada …","alam dan lingkungan hidup","tulang belulang","bayi yang baru lahir","kitab suci"],
+["Istilah “rutas pali” berarti …","sial wabah penyakit","rasa bakti","turun ke bawah","perempuan hamil"],
+["Mamapas Lewu berasal dari provinsi …","Kalimantan Tengah","Kalimantan Barat","Sulawesi Tengah","Papua Barat"],
+["Tiwah adalah upacara yang digelar bagi seseorang yang …","telah meninggal","baru lahir","sedang hamil","akan menikah"],
+["Pada ritual Tiwah dilakukan pemindahan tulang ke dalam …","sandung","petak danum","Panaturan","lewu"],
+["Prosesi Tiwah dilakukan menurut …","tahap-tahap yang sudah menjadi tradisi","kesepakatan acak peserta","aturan undang-undang","hitungan kalender internasional"],
+["Tiwah menjadi tradisi pada masyarakat …","Dayak di Kalimantan Tengah","Bugis di Sulawesi","Jawa di Yogyakarta","Minang di Sumatra Barat"],
+["Sandung dalam upacara Tiwah berfungsi sebagai tempat …","menyimpan tulang yang dipindahkan","memberi nama bayi","membersihkan lingkungan","menyimpan kitab suci"],
+["Tetek Pantan dilakukan dengan rasa …","bakti dan kepercayaan yang tinggi","takut dan cemas","bosan dan terpaksa","bangga dan sombong"],
+["Tetek Pantan bermakna membangkitkan rasa Ketuhanan terhadap segala sesuatu yang bersifat …","sakral","duniawi","modern","ekonomis"],
+["Melalui Tetek Pantan, dengan kasih Tuhan manusia akan merasakan …","rahmat-Nya","kekayaan","kekuasaan","kemenangan"],
+["Nyaki Tihi dilakukan terhadap …","perempuan yang hamil anak pertama","bayi berusia satu bulan","orang yang meninggal","lingkungan yang tercemar"],
+["Temei adalah istilah dalam bahasa …","Dayak Ngaju","Jawa","Sunda","Banjar Hulu"],
+["Temei dalam Nyaki Tihi berarti …","hamil anak pertama","bayi satu bulan","tulang leluhur","kitab suci"],
+["Nahunan merupakan kewajiban yang tertuang dalam kitab suci …","Panaturan pasal 53","Panaturan pasal 35","Al-Kitab pasal 53","Weda pasal 5"],
+["Kata “Nahunan” berasal dari kata …","nuhun","nyaki","tiwah","mamapas"],
+["Kata “nuhun” berarti …","turun","naik","bersih","hamil"],
+["Upacara Nahunan adalah ritual pemberian nama bagi bayi berusia …","satu bulan atau balita","sembilan bulan","dewasa","lima tahun ke atas"],
+["Dalam Nahunan, bayi atau balita dibawa …","turun keluar rumah","naik ke sandung","ke tengah hutan","ke pinggir sungai"],
+["Upacara untuk membersihkan lingkungan dari wabah penyakit adalah …","Mamapas Lewu","Tiwah","Nahunan","Nyaki Tihi"],
+["Upacara pemindahan tulang ke sandung adalah …","Tiwah","Mamapas Lewu","Tetek Pantan","Nahunan"],
+["Upacara bagi perempuan hamil anak pertama adalah …","Nyaki Tihi","Nahunan","Tiwah","Mamapas Lewu"],
+["Upacara pemberian nama bagi bayi adalah …","Nahunan","Tiwah","Tetek Pantan","Mamapas Lewu"],
+["Upacara yang membangkitkan rasa Ketuhanan terhadap hal sakral adalah …","Tetek Pantan","Nyaki Tihi","Nahunan","Tiwah"],
+["Panaturan dalam materi ini disebut sebagai …","kitab suci","nama bayi","jenis penyakit","tempat menyimpan tulang"],
+["Nahunan wajib dilaksanakan karena …","merupakan kewajiban yang tertuang dalam kitab suci","hanya untuk hiburan","diminta pemerintah","tidak ada alasan khusus"],
+["Pasangan upacara dan makna yang BENAR adalah …","Tiwah – ritual bagi orang yang telah meninggal","Nahunan – ritual bagi orang meninggal","Nyaki Tihi – ritual pemindahan tulang","Mamapas Lewu – ritual pemberian nama bayi"],
+["Pernyataan yang benar tentang Tiwah adalah …","prosesnya dilakukan menurut tahap-tahap tradisi","dilakukan untuk bayi baru lahir","hanya dilakukan saat panen","tidak melibatkan sandung"],
+["Dua upacara adat yang berkaitan dengan awal kehidupan (kehamilan dan bayi) adalah …","Nyaki Tihi dan Nahunan","Tiwah dan Mamapas Lewu","Tetek Pantan dan Tiwah","Mamapas Lewu dan Tetek Pantan"],
+["Sikap yang tepat generasi muda terhadap adat istiadat daerah adalah …","mengenal, menghargai, dan melestarikannya","meninggalkannya sepenuhnya","mengubahnya sesuka hati","menganggapnya tidak penting"]
+];
+const $=id=>document.getElementById(id);
+const sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+function tab(t){["materi","kuis","tts","rekap"].forEach(x=>$(x).classList.toggle("hide",x!==t));document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.t===t));if(t==="rekap")muat();scrollTo(0,0)}
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>tab(b.dataset.t));
+
+let S=null;
+function mulai(){
+  const nama=$("nm").value.trim(),kelas=$("kl").value.trim();
+  if(!nama||!kelas){alert("Isi nama dan pilih kelas dulu.");return}
+  S={nama,kelas,i:0,items:sh(Q).map(q=>({q:q[0],o:sh(q.slice(1).map((t,k)=>({t,c:k===0}))),a:-1}))};
+  $("start").classList.add("hide");$("hasil").classList.add("hide");$("play").classList.remove("hide");draw();
+}
+function draw(){
+  const it=S.items[S.i];
+  $("no").textContent=`Soal ${S.i+1} dari ${S.items.length}`;$("qt").textContent=it.q;
+  $("op").innerHTML="";
+  it.o.forEach((o,k)=>{const b=document.createElement("button");b.className="opt"+(it.a===k?" sel":"");b.textContent=String.fromCharCode(65+k)+". "+o.t;b.onclick=()=>{it.a=k;draw()};$("op").appendChild(b)});
+  $("pv").disabled=S.i===0;$("nx").disabled=S.i===S.items.length-1;
+  const done=S.items.filter(x=>x.a>=0).length;$("pb").style.width=done/S.items.length*100+"%";
+  $("gr").innerHTML="";S.items.forEach((x,k)=>{const s=document.createElement("span");s.textContent=k+1;s.className=(x.a>=0?"done ":"")+(k===S.i?"cur":"");s.onclick=()=>{S.i=k;draw()};$("gr").appendChild(s)});
+}
+function go(d){S.i+=d;draw();scrollTo(0,0)}
+function selesai(){
+  const kosong=S.items.filter(x=>x.a<0).length;
+  if(kosong&&!confirm(`Masih ada ${kosong} soal belum dijawab. Kumpulkan sekarang?`))return;
+  const benar=S.items.filter(x=>x.a>=0&&x.o[x.a].c).length,nilai=Math.round(benar/S.items.length*100);
+  const rec={waktu:new Date().toLocaleString("id-ID"),nama:S.nama,kelas:S.kelas,benar,total:S.items.length,nilai};
+  const l=JSON.parse(localStorage.getItem("mulok_rekap")||"[]");l.push(rec);localStorage.setItem("mulok_rekap",JSON.stringify(l));
+  kirim(rec);
+  $("play").classList.add("hide");$("hasil").classList.remove("hide");
+  $("hasil").innerHTML=`<div class="card"><div class="msg" style="text-align:center">${S.nama} · ${S.kelas}</div><div class="score">${nilai}</div><p style="text-align:center">Benar ${benar} dari ${S.items.length} soal</p><p class="msg" id="kr" style="text-align:center"></p><div class="row" style="justify-content:center"><button class="btn" onclick="tab('rekap')">Lihat Rekap</button><button class="btn g" onclick="ulang()">Ulangi</button></div></div><h3>Pembahasan</h3>`+
+  S.items.map((x,n)=>`<div class="card"><div class="msg">Soal ${n+1}</div><b>${x.q}</b>`+x.o.map((o,k)=>`<div class="opt ${o.c?"ok":(x.a===k?"no":"")}" style="cursor:default">${String.fromCharCode(65+k)}. ${o.t}${o.c?" ✓":""}${x.a===k&&!o.c?" ✗ (jawabanmu)":""}</div>`).join("")+`</div>`).join("");
+  scrollTo(0,0);
+}
+function ulang(){$("hasil").classList.add("hide");$("start").classList.remove("hide")}
+
+// Guru: tempel URL Web App Apps Script di antara tanda kutip berikut agar siswa tidak perlu mengisi apa pun.
+const SCRIPT_URL="https://script.google.com/macros/s/AKfycbzHxuq_0aG17XXXkZXCgsxNrxXpnkSg0TSeKiVZcE60WFtOl2whfSkIqrD3tjaEiqWsXg/exec";
+const getUrl=()=>SCRIPT_URL||localStorage.getItem("mulok_url")||"";
+async function kirim(rec){
+  const u=getUrl();if(!u){$("kr").textContent="Nilai disimpan di perangkat ini (URL spreadsheet belum diatur).";return}
+  try{await fetch(u,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify(rec)});$("kr").textContent="Nilai terkirim ke spreadsheet ✓"}
+  catch(e){$("kr").textContent="Gagal mengirim ke spreadsheet; nilai tetap tersimpan lokal."}
+}
+let DATA=[];
+async function muat(){
+  const u=getUrl();
+  let d=JSON.parse(localStorage.getItem("mulok_rekap")||"[]");$("st").textContent="Menampilkan data lokal perangkat ini.";
+  if(u){try{const r=await fetch(u);const j=await r.json();if(Array.isArray(j)){d=j;$("st").textContent="Data dari Google Spreadsheet ✓"}}catch(e){$("st").textContent="Gagal memuat spreadsheet; menampilkan data lokal."}}
+  DATA=d;render();
+}
+const KELAS=["11 R1","11 R2","11 R3","11 R4","11 R5","11 R6"];let FIL="Semua";
+const nk=s=>String(s).toLowerCase().replace(/[\s\-_.]/g,"").replace(/^xi/,"11");
+const canon=s=>KELAS.find(k=>nk(k)===nk(s))||String(s).trim()||"Tanpa kelas";
+function render(){
+  const e=s=>String(s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+  const by={};KELAS.forEach(k=>by[k]=[]);DATA.forEach(r=>{(by[canon(r.kelas)]=by[canon(r.kelas)]||[]).push(r)});
+  const names=Object.keys(by).filter(k=>KELAS.includes(k)||by[k].length);
+  if(FIL!=="Semua"&&!names.includes(FIL))FIL="Semua";
+  $("chips").innerHTML=["Semua",...names].map(k=>`<button class="btn ${k===FIL?"":"g"}" style="padding:6px 12px;font-size:.9rem" onclick="FIL='${k}';render()">${k} (${k==="Semua"?DATA.length:by[k].length})</button>`).join("");
+  $("tbl").innerHTML=names.filter(k=>FIL==="Semua"||k===FIL).map(k=>{
+    const l=by[k].slice().sort((a,b)=>String(a.nama).localeCompare(String(b.nama))),v=l.map(r=>+r.nilai||0),n=l.length;
+    const sum=n?`<span class="tag">Peserta: ${n}</span><span class="tag">Rata-rata: ${(v.reduce((a,b)=>a+b,0)/n).toFixed(1)}</span><span class="tag">Tertinggi: ${Math.max(...v)}</span><span class="tag">Terendah: ${Math.min(...v)}</span>`:"";
+    return `<div class="card"><h3>Kelas ${e(k)}</h3>${sum}<div class="wrap"><table><thead><tr><th>#</th><th>Nama</th><th>Waktu</th><th>Benar</th><th>Nilai</th></tr></thead><tbody>`+
+    (n?l.map((r,i)=>`<tr><td>${i+1}</td><td>${e(r.nama)}</td><td>${e(r.waktu)}</td><td>${e(r.benar)}/${e(r.total)}</td><td><b>${e(r.nilai)}</b></td></tr>`).join(""):`<tr><td colspan="5" class="msg">Belum ada data.</td></tr>`)+`</tbody></table></div></div>`}).join("");
+}
+function csv(){
+  const t="Waktu,Nama,Kelas,Benar,Total,Nilai\n"+DATA.slice().sort((a,b)=>canon(a.kelas).localeCompare(canon(b.kelas))).map(r=>[r.waktu,r.nama,canon(r.kelas),r.benar,r.total,r.nilai].map(x=>`"${String(x).replace(/"/g,'""')}"`).join(",")).join("\n");
+  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([t],{type:"text/csv"}));a.download="rekap-nilai-mulok.csv";a.click();
+}
+
+// ===== Teka-Teki Silang =====
+const T={"h":14,"w":14,"e":[{"n":1,"a":"NGAJU","c":"Suku Dayak pemilik bahasa asal istilah Temei","r":0,"k":12,"d":"D"},{"n":2,"a":"TEMEI","c":"Hamil anak pertama dalam bahasa Dayak Ngaju","r":1,"k":6,"d":"D"},{"n":3,"a":"SAKRAL","c":"Bersifat suci; sasaran rasa Ketuhanan dalam Tetek Pantan","r":1,"k":9,"d":"D"},{"n":4,"a":"DANUM","c":"Kata kedua dari petak ... (alam dan lingkungan hidup)","r":2,"k":0,"d":"A"},{"n":5,"a":"MAMAPAS","c":"Kata pertama upacara pembersihan lingkungan dari wabah","r":2,"k":4,"d":"D"},{"n":6,"a":"PANTAN","c":"Kata kedua upacara yang membangkitkan rasa Ketuhanan","r":2,"k":8,"d":"A"},{"n":7,"a":"PANATURAN","c":"Kitab suci yang memuat kewajiban Nahunan (pasal 53)","r":4,"k":2,"d":"D"},{"n":8,"a":"KAHARINGAN","c":"Agama yang dianut pelaksana ritual Mamapas Lewu","r":5,"k":1,"d":"A"},{"n":9,"a":"SANDUNG","c":"Tempat tulang dipindahkan dalam upacara Tiwah","r":7,"k":8,"d":"D"},{"n":10,"a":"RUTAS","c":"Kata pertama dari ... pali (sial wabah penyakit)","r":8,"k":0,"d":"A"},{"n":11,"a":"TIWAH","c":"Upacara bagi orang yang telah meninggal","r":8,"k":12,"d":"D"},{"n":12,"a":"NUHUN","c":"Asal kata Nahunan, berarti turun","r":9,"k":5,"d":"D"},{"n":13,"a":"NYAKI","c":"Kata pertama upacara untuk perempuan hamil anak pertama","r":9,"k":8,"d":"A"},{"n":14,"a":"NAHUNAN","c":"Ritual pemberian nama bayi yang dibawa turun keluar rumah","r":12,"k":2,"d":"A"}]};
+let TD='A',TC=null,TI={};
+const tk=(r,c)=>r+"_"+c;
+function ttsInit(){
+  const cells={};T.e.forEach(e=>{for(let i=0;i<e.a.length;i++){const r=e.r+(e.d==="D"?i:0),c=e.k+(e.d==="A"?i:0);const o=cells[tk(r,c)]=cells[tk(r,c)]||{ch:e.a[i],w:{}};o.w[e.d]=e;if(i===0)o.n=e.n}});
+  T.cells=cells;const g=$("tg");g.style.gridTemplateColumns=`repeat(${T.w},auto)`;g.innerHTML="";TI={};
+  for(let r=0;r<T.h;r++)for(let c=0;c<T.w;c++){const o=cells[tk(r,c)],d=document.createElement("div");d.className="tc";
+    if(o){d.innerHTML=(o.n?`<b>${o.n}</b>`:"")+`<input maxlength="1" autocomplete="off" data-r="${r}" data-c="${c}">`;const i=d.firstChild===null?null:d.querySelector("input");TI[tk(r,c)]=i;
+      i.onclick=()=>{if(TC===tk(r,c)&&o.w.A&&o.w.D)TD=TD==="A"?"D":"A";else if(!o.w[TD])TD=o.w.A?"A":"D";TC=tk(r,c);hl()};
+      i.oninput=()=>{i.value=i.value.replace(/[^a-zA-Z]/g,"").toUpperCase().slice(-1);i.className=i.className.replace(/ok|no/g,"");if(i.value)step(r,c,1);hl();ttsDone()};
+      i.onkeydown=ev=>{if(ev.key==="Backspace"&&!i.value)step(r,c,-1);const m={ArrowRight:[0,1,"A"],ArrowLeft:[0,-1,"A"],ArrowDown:[1,0,"D"],ArrowUp:[-1,0,"D"]}[ev.key];if(m){ev.preventDefault();const n=TI[tk(r+m[0],c+m[1])];if(n){TD=m[2];n.focus();n.click()}}}}
+    g.appendChild(d)}
+  ["A","D"].forEach(k=>{$("c"+k).innerHTML=T.e.filter(e=>e.d===k).map(e=>`<div class="cl" id="cl${e.n}${k}" onclick="pilih(${e.n},'${k}')"><b>${e.n}.</b> ${e.c} <span class="msg">(${e.a.length})</span></div>`).join("")});
+}
+function step(r,c,s){const d=TD==="A"?[0,s]:[s,0];const n=TI[tk(r+d[0],c+d[1])];if(n){TC=tk(r+d[0],c+d[1]);n.focus()}}
+function cur(){if(!TC)return null;const o=T.cells[tk(...TC.split("_").map(Number))];return o&&o.w[TD]}
+function hl(){Object.values(TI).forEach(i=>i.classList.remove("hl"));document.querySelectorAll(".cl").forEach(x=>x.classList.remove("on"));const e=cur();if(!e)return;
+  for(let i=0;i<e.a.length;i++)TI[tk(e.r+(e.d==="D"?i:0),e.k+(e.d==="A"?i:0))].classList.add("hl");$("cl"+e.n+e.d).classList.add("on")}
+function pilih(n,k){const e=T.e.find(x=>x.n===n&&x.d===k);TD=k;TC=tk(e.r,e.k);TI[TC].focus();hl()}
+function ttsCek(){let b=0,s=0;Object.entries(T.cells).forEach(([k,o])=>{const i=TI[k];i.classList.remove("ok","no");if(i.value){if(i.value===o.ch){i.classList.add("ok");b++}else{i.classList.add("no");s++}}});
+  $("tsm").textContent=`Benar ${b} kotak, salah ${s}, kosong ${Object.keys(T.cells).length-b-s}.`;ttsDone()}
+function ttsBuka(){Object.entries(T.cells).forEach(([k,o])=>{TI[k].value=o.ch;TI[k].className="ok"});ttsDone()}
+function ttsReset(){Object.values(TI).forEach(i=>{i.value="";i.className=""});$("tsm").textContent="";ttsDone()}
+function ttsDone(){let all=true;T.e.forEach(e=>{let ok=true;for(let i=0;i<e.a.length;i++){if(TI[tk(e.r+(e.d==="D"?i:0),e.k+(e.d==="A"?i:0))].value!==e.a[i])ok=false}$("cl"+e.n+e.d).classList.toggle("fin",ok);if(!ok)all=false});
+  if(all)$("tsm").textContent="🎉 Selamat! Semua jawaban benar."}
+ttsInit();
+</script>
+</body>
+</html>
